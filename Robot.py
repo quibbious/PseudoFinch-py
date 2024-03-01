@@ -73,6 +73,8 @@ class Robot:
         return direction, distance, speed
     @staticmethod
     def setTurn(direction=str, angle=int, speed=int):
+        """Turns the Finch right or left for a specified angle at a specified speed.
+        The method requires a direction (‘R’ for right or ‘L’ for left), an angle in degrees, and a speed from 0-100."""
         if direction != 'R' and 'L': 
             
             Errors.printError(f"SyntaxError: invalid direction '{direction}'")
@@ -81,9 +83,9 @@ class Robot:
             
             Errors.SpeedValueError()
             
-        if angle < 1: 
+        if not angle in range(1,361): # 360 degree limit per command 
             
-            Errors.printError("Angle must be at least 1")
+            Errors.printError("ValueError: Angle out of range; must be 1-360")
             
         return direction, angle, speed
     @staticmethod
@@ -97,8 +99,6 @@ class Robot:
         id = 1  
         return robot
 
-
-
 # example usage
 
 robot = Robot("Finch") # define robot
@@ -108,5 +108,7 @@ robot.setMove('F',100,50) # move the robot forward 100 cm, at 50% speed
 getvals = Robot.getVals(robot.name) # get the robot's name and put it in a getvals variable
 
 beaklight = robot.BeakLight(100,255,100) # change the beakLight color to blue=100, red=255, green=100, and put it into "beaklight"
+
+robot.setTurn('R', 360, 100)
 
 print(beaklight) # print the beaklight color
