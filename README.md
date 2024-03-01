@@ -1,5 +1,5 @@
 
-# FakeFinch-py
+# PseudoFinch-py
 
 An emulation library of the Finch robot 2.0 functions in python
 
