@@ -10,16 +10,16 @@ class Errors:
 
     @staticmethod
     def RGBValueError():
-        Errors.printError("ValueError: invalid RGB range, must be between 1-255")
+        Errors.printError("ValueError: invalid RGB range, must be between 0-255")
 
     @staticmethod
     def checkIfInvalidRGBValue(R, G, B):
         
-        if not R in range(0,255):
+        if not R in range(0,256):
             Errors.RGBValueError()
-        if not G in range(0,255):
+        if not G in range(0,256):
             Errors.RGBValueError()
-        if not B in range(0,255):
+        if not B in range(0,256):
             Errors.RGBValueError()
 
     @staticmethod
@@ -99,14 +99,14 @@ class Robot:
 
 
 
+# example usage
 
+robot = Robot("Finch") # define robot
 
-robot = Robot("Finch")
+robot.setMove('F',100,50) # move the robot forward 100 cm, at 50% speed
 
-robot.setMove('F',100,50)
+getvals = Robot.getVals(robot.name) # get the robot's name and put it in a getvals variable
 
-getvals = Robot.getVals(robot.name)
+beaklight = robot.BeakLight(100,255,100) # change the beakLight color to blue=100, red=255, green=100, and put it into "beaklight"
 
-beaklight = robot.BeakLight(100,200,100)
-
-print(beaklight)
+print(beaklight) # print the beaklight color
