@@ -6,7 +6,7 @@ An emulation library of the Finch robot 2.0 functions in python
 
 ## Documentation
 
-[Documentation]([https://quarksay.github.io/PseudoFinch-py/])
+[Documentation](https://quarksay.github.io/PseudoFinch-py/)
 
 # Constructors: 
 ## Method Signature: Robot()
