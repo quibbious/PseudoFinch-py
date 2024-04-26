@@ -127,7 +127,7 @@ class Robot:
         LEDlist[index] = value
         return LEDlist
     
-    def digiPrint(self, message: str):
+    def print(self, message: str):
         """Print a string on the micro:bit LED array.
         The string must contain only English letters. strings will default to uppercase if lowercase.
         Example: robot.digiPrint("Hello World")
