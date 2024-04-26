@@ -36,7 +36,7 @@ class Robot:
     def __init__(self, name=None):
         self.name = name
     
-    def BeakLight(self, R: int = 0, G: int = 0, B: int = 0):
+    def setBeak(self, R: int = 0, G: int = 0, B: int = 0):
         """Sets a tri-color LED in the Robot beak to a given color by setting the intensities of the red, green, and blue elements inside it.
         The method requires three intensity values from 0-255. Setting all three intensity values to 0 turns the beak off.
         Example: Robot.setBeak(0,100,0)"""
