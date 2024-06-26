@@ -28,8 +28,7 @@ An emulation library of the Finch robot 2.0 functions in python
     Example: myRobot.setMotors(-50,50)
 
 ## Method Signature: stop()
-    Description: Stops the Robot wheels.
-    Example: myRobot.stop()
+    deprecated :(
 
 ## Method Signature: setBeak(redIntensity, greenIntensity, blueIntensity)
     Description: Sets a tri-color LED in the Robot beak to a given color by setting the intensities of the red, green, and blue elements inside it. The method requires three intensity values from 0-100. Setting all three intensity values to 0 turns the beak off.
