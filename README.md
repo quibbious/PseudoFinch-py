@@ -4,9 +4,7 @@
 Simulates most functions of the BirdBrain Technologies Finch 2.0 Robot.
 
 ## Installation
-as of Python 3.12:
-`pip install pseudofinch==1.0.0`
-`import pseudofinch.Finch as pseudofinch`
+under construction, it's easiest to download the library and import direct files.
 
 # Constructors: 
 ## Method Signature: Finch()
