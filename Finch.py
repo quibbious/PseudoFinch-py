@@ -6,26 +6,19 @@ class Errors:
     @staticmethod
     def printError(message):
         # generic error printing
-        print("\033[91m" + message + "\033[0m")  # ANSI escape code for red text
-        SystemExit()
+        print("\033[91m" + message + "\033[0m")  # ANSI escape code for red text (GPT code)
+        
 
     @staticmethod
     def isValidRGB(RED: int = 0, GREEN: int = 0, BLUE: int = 0):
-        # checks if the RGB values are between 0-255
+        # no need for hard-coding a list for no reason, just use some basic IF statements instead.
 
-        COLORS = {
-            "RED": RED,
-            "GREEN": GREEN,
-            "BLUE": BLUE
-        }
-
-        for COLOR in COLORS:
-            if COLORS[COLOR] not in range(256):
-                Errors.printError(f"COLOR {COLOR} ({COLORS[COLOR]}) is not between 0-255.")
-                return False
-            else:
-                return True
-
+        if (RED > 0 or RED < 255): Errors.printError(f"RED is not 0-255.")
+            return False
+        if (GREEN > 0 or GREEN < 255): Errors.printError(f"GREEN is not 0-255.") 
+            return False
+        if (BLUE > 0 or BLUE < 255): Errors.printError(f"BLUE is not 0-255.")
+            return False
 
 class Finch:
     """Main class for the MANY functions of a pseudofinch Finch"""
